@@ -15,15 +15,6 @@ const Sidebar = () => {
           }`}>
         <div className="flex flex-col justify-between h-full py-8">
           <div className="flex flex-col items-center space-y-4">
-            <div className="flex items-center space-x-4">
-              <img
-                src="C:\Users\osman\journal-app\profpicdefault.jpg"
-                alt="Profile"
-                className="w-16 h-16 rounded-full border-2 border-white"
-              />
-              <p className="text-white">Osman Ferrer</p>
-            </div>
-            <hr className="border-gray-600 w-full" />
             <a href="#" className="text-white hover:text-gray-300">
               Dates
             </a>

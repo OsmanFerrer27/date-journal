@@ -1,6 +1,7 @@
 //Sidebar.js
 'use client'; //
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,21 +16,21 @@ const Sidebar = () => {
           }`}>
         <div className="flex flex-col justify-between h-full py-8">
           <div className="flex flex-col items-center space-y-4">
-            <a href="#" className="text-white hover:text-gray-300">
+            <Link href="/dates" className="text-white hover:text-gray-300">
               Dates
-            </a>
+            </Link>
             <hr className="border-gray-600 w-full" />
-            <a href="#" className="text-white hover:text-gray-300">
+            <Link href="/relationships" className="text-white hover:text-gray-300">
               Relationships
-            </a>
+            </Link>
             <hr className="border-gray-600 w-full" />
-            <a href="#" className="text-white hover:text-gray-300">
+            <Link href="/albums" className="text-white hover:text-gray-300">
               Albums
-            </a>
+            </Link>
             <hr className="border-gray-600 w-full" />
-            <a href="#" className="text-white hover:text-gray-300">
+            <Link href="/settings" className="text-white hover:text-gray-300">
               Settings
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,29 +1,33 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Login() {
+export default function HomePage() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4 text-center text-gray-700">Log In</h1>
-        <form className="space-y-4">
-          <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username:</label>
-            <input type="text" id="username" name="username" className="mt-1 h-8 text-gray-700 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-          </div>
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password:</label>
-            <input type="password" id="password" name="password" className="mt-1 h-8 text-gray-700 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
-          </div>
-          <br />
-          <div>
-            <input type="submit" value="Login" className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700" />
-          </div>
-        </form>
-        <div className="mt-6 text-center">
-          <p className="mt-2 text-gray-700">Not registered?</p>
-          <Link href="/signup" className="text-indigo-600 hover:text-indigo-800 underline">Sign Up</Link>
+    <div className="min-h-screen flex flex-col">
+      <header className="flex justify-between items-center rounded-lg p-4 border-4 border-b-indigo-700 bg-white-100 shadow-md">
+        <div className="flex items-center">
+          <Image src="logo.svg" alt="App Logo" width={50} height={50} />
+          <h1 className="ml-2 text-xl font-bold text-indigo-700">Date Journal</h1>
         </div>
-      </div>
+        <div className="flex items-center">
+          <span className="text-gray-400 mx-4">|</span>
+          <Link href="/login" className="text-white hover:text-gray-300">
+            <button className="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">
+              Log In
+            </button>
+          </Link>
+        </div>
+      </header>
+      <main 
+        className="flex-grow flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/bgg-img.jpg')" }}
+      >
+        <Link href="/signup" className="text-white hover:text-gray-300">
+          <button className="bg-indigo-700 text-white py-4 px-8 text-2xl rounded-md hover:bg-indigo-700">
+            Start Now
+          </button>
+        </Link>
+      </main>
     </div>
   );
 }
